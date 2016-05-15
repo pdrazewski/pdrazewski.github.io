@@ -1,7 +1,23 @@
 @import "_defaults/_mixins";
+@import "_defaults/_normalize";
 @import "_vars/_colors";
 @import "_vars/_typography";
 
 body {
-  background: red;
-}    
+	font: 400 16px/22px $font-secondary;
+}      
+.b-mainWrapper {
+	@include centered(1200px);
+} 
+.b-sidebar {
+	@include bp(tablet) {
+		width: 20%;
+		float: left;
+	}
+}
+.b-mainContent {
+	@include bp(tablet) {
+		width: 75%;
+		float: right;
+	}
+}

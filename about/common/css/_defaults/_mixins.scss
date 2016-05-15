@@ -5,6 +5,12 @@
 	background: url(../images/sprite.png) $pos_t + px $pos_l + px no-repeat;
 }
 
+@mixin centered($width) {
+	margin: 0 auto;
+	width: 100%;
+	max-width: $width;
+}
+
 /*
 * Mixin for basic CSS triangles
 */
@@ -74,7 +80,7 @@ $break_point6: if($rwd, 1024px, 1px);
 $break_point7: if($rwd, 1200px, 1px);
 $break_point8: if($rwd, 1370px, 1px);
 
-@mixin breakpoint($name) {
+@mixin bp($name) {
 	@if $name == "phone_small" {
 		@media screen and (min-width: $break_point1) {
 			@content;
