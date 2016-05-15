@@ -1,0 +1,9 @@
+**/.sass-cache/
+**/node_modules/
+**/psd/
+**/*.psd
+psd
+*.orig
+npm-debug.log
+.tmp/
+**/.vscode/
