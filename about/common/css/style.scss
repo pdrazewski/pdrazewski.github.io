@@ -2,22 +2,123 @@
 @import "_defaults/_normalize";
 @import "_vars/_colors";
 @import "_vars/_typography";
+@import "modules/_typo"; 
 
-body {
+body { 
 	font: 400 16px/22px $font-secondary;
-}      
+	background: $cl-grey2;
+	p {
+		font: 400 16px/22px $font-secondary;
+	}
+	a {
+		font: 600 16px/22px $font-secondary;
+	}
+}       
 .b-mainWrapper {
-	@include centered(1200px);
-} 
-.b-sidebar {
-	@include bp(tablet) {
-		width: 20%;
-		float: left;
+	max-width: 1280px;
+	margin: 0 auto;
+	min-height: 500px;
+}
+.b-header {
+	margin-top: 20px;
+	padding: 20px 0 30px;
+	background: $cl-grey1;
+	border-bottom: 1px solid$cl-grey3;
+}
+.b-logo {
+	font-family: $font-primary;
+	color: $cl-white;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 5px;
+	float: left;
+	margin: 40px 0 0 80px;
+	position: relative;
+	padding-left: 60px;
+	span {
+		font-weight: 400;
 	}
 }
-.b-mainContent {
-	@include bp(tablet) {
-		width: 75%;
-		float: right;
+.b-lead {
+	padding: 40px 80px;
+	font-family: $font-secondary;
+	font-weight: 300;
+	color: $cl-greyA;
+	font-size: 42px;
+	line-height: 48px;
+	max-width: 75%;
+	b {
+		color: $cl-white;
 	}
+}
+
+
+.m-hmbg {
+	cursor: pointer;
+	display: block;
+	height: 24px;
+	overflow: hidden;
+	font-size: 24px;
+	position: absolute;
+	left: 0;
+	z-index: 10;
+	top: 4px;
+	.m-hmbg_toggle {
+		position: relative;
+		@include rotate(0deg);
+		@include transition(.5s ease-in-out);
+		cursor: pointer; 
+		width: 32px;
+		margin: 0 auto;
+		span {
+			display: block;
+			position: absolute;
+			height: 2px;
+			width: 100%;
+			background: $cl-white;
+			opacity: 1;
+			left: 0;
+			@include rotate(0deg);
+			@include transition(.25s ease-in-out); 
+			&:nth-child(1) {
+				top: 0;
+				-webkit-transform-origin: left center;
+				-moz-transform-origin: left center;
+				-o-transform-origin: left center;
+				transform-origin: left center;
+			}
+			&:nth-child(2) {
+				top: 6px;
+				-webkit-transform-origin: left center;
+				-moz-transform-origin: left center;
+				-o-transform-origin: left center;
+				transform-origin: left center;
+			}
+			&:nth-child(3) {
+				top: 12px;
+				-webkit-transform-origin: left center;
+				-moz-transform-origin: left center;
+				-o-transform-origin: left center;
+				transform-origin: left center;
+			}
+		}
+	}
+}
+
+.m-btn {
+	margin-left: 80px;
+	padding: 10px 20px;
+	color: $cl-white;
+	font-size: 16px;
+	float: left;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 20px;
+	background: transparent;
+	border: 2px solid $cl-white;
+	text-transform: uppercase;
+	font-family: $font-primary;
+	font-weight: 500;
+
 }
