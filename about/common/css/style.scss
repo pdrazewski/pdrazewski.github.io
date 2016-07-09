@@ -20,9 +20,8 @@ body {
 	max-width: 1280px;
 	margin: 0 auto;
 	min-height: 500px;
-}
+} 
 .b-header {
-	margin-top: 20px;
 	padding: 20px 0 30px;
 	background: $cl-grey1;
 	border-bottom: 1px solid $cl-grey2;
@@ -35,21 +34,29 @@ body {
 	font-weight: 700;
 	letter-spacing: 5px;
 	float: left;
-	margin: 40px 0 0 80px;
+	margin: 20px 0 20px 30px;
 	position: relative;
 	padding-left: 35px;
+	@include bp(tablet) {
+		margin: 40px 0 0 80px;
+	}
 	span {
 		font-weight: 400;
 	} 
 }
 .b-lead {
-	padding: 40px 80px;
+	padding: 20px 30px;
 	font-family: $font-secondary;
 	color: $cl-greyA;
-	font-size: 42px;
-	line-height: 48px;
-	max-width: 75%;
+	font-size: 22px;
+	line-height: 28px;
 	font-weight: 300;
+	@include bp(tablet) {
+		font-size: 42px;
+		padding: 40px 80px;
+		line-height: 48px;
+		max-width: 75%;
+	}
 	p {
 		font-size: inherit;
 		line-height: inherit;
@@ -61,7 +68,10 @@ body {
 	}
 }
 .b-main {
-	padding: 20px 80px 30px;
+	padding: 20px 20px 30px;
+	@include bp(tablet) {
+		padding: 20px 60px 30px;
+	}
 	background: $cl-grey1;
 	border-bottom: 1px solid $cl-grey2;
 }
@@ -72,24 +82,33 @@ body {
 		color: $cl-white;
 		font-size: 52px;
 		line-height: 58px;
+		padding-left: 10px;
 		font-family: $font-secondary;
 		font-weight: 300;
+		@include bp(tablet) {
+			padding-left: 20px;
+		}
 	}
 	.b-skill_item {
-		padding-bottom: 20px;
-		padding-top: 10px;
+		padding: 10px 10px 20px;
 		margin-bottom: 15px;
+		@include bp(tablet) {
+			padding: 10px 20px 20px;
+		}
 		&:hover {
-			.b-skill_name {
-				color: $cl-orangeFF;
-			}
-			.b-skill_content {
-				color: $cl-white;
+			@include bp(tablet) {
+				background: $cl-brown43;
+				cursor: help;
+				.b-skill_name {
+					color: $cl-white;
+					border-top: 1px solid $cl-brown43;
+				}
+				.b-skill_content {
+					color: $cl-white;
+				}
 			}
 		}
 		.b-skill_name {
-			float: left; 
-			width: 20%;
 			font-family: $font-secondary;
 			font-weight: 300;
 			color: $cl-greyA;
@@ -98,15 +117,22 @@ body {
 			padding-top: 10px;
 			border-top: 1px solid $cl-grey2;
 			line-height: 28px;
+			@include bp(tablet) {
+				float: left; 
+				width: 20%;
+			}
 		}
 		.b-skill_content {
-			float: right;
-			width: 76%;
 			font-family: $font-primary;
 			font-weight: 400; 
+			padding-top: 22px;
 			font-size: 16px;
 			color: $cl-greyD;
 			line-height: 24px;
+			@include bp(tablet) {
+				float: right;
+				width: 76%;
+			}
 		}
 	}
 }

@@ -1482,20 +1482,34 @@ img {
 }
 
 .m-btn {
-  margin-left: 80px;
+  margin-left: 30px;
+  margin-right: 30px;
   padding: 15px 30px;
   color: #fff;
   font-size: 16px;
-  float: left;
   text-decoration: none;
   display: block;
   margin-top: 10px;
+  text-align: center;
   margin-bottom: 30px;
   background: transparent;
   border: 1px solid #fff;
   text-transform: uppercase;
   font-family: "futura-pt", sans-serif;
   font-weight: 400;
+}
+
+@media screen and (min-width: 640px) {
+  .m-btn {
+    float: left;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .m-btn {
+    margin-left: 80px;
+  }
 }
 
 .m-btn:hover {
@@ -1578,7 +1592,6 @@ body a {
 }
 
 .b-header {
-  margin-top: 20px;
   padding: 20px 0 30px;
   background: #111111;
   border-bottom: 1px solid #222222;
@@ -1592,9 +1605,15 @@ body a {
   font-weight: 700;
   letter-spacing: 5px;
   float: left;
-  margin: 40px 0 0 80px;
+  margin: 20px 0 20px 30px;
   position: relative;
   padding-left: 35px;
+}
+
+@media screen and (min-width: 768px) {
+  .b-logo {
+    margin: 40px 0 0 80px;
+  }
 }
 
 .b-logo span {
@@ -1602,13 +1621,21 @@ body a {
 }
 
 .b-lead {
-  padding: 40px 80px;
+  padding: 20px 30px;
   font-family: "essonnes-display", sans-serif;
   color: #aaaaaa;
-  font-size: 42px;
-  line-height: 48px;
-  max-width: 75%;
+  font-size: 22px;
+  line-height: 28px;
   font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .b-lead {
+    font-size: 42px;
+    padding: 40px 80px;
+    line-height: 48px;
+    max-width: 75%;
+  }
 }
 
 .b-lead p {
@@ -1623,9 +1650,15 @@ body a {
 }
 
 .b-main {
-  padding: 20px 80px 30px;
+  padding: 20px 20px 30px;
   background: #111111;
   border-bottom: 1px solid #222222;
+}
+
+@media screen and (min-width: 768px) {
+  .b-main {
+    padding: 20px 60px 30px;
+  }
 }
 
 .b-skill .b-skill_headline {
@@ -1634,27 +1667,43 @@ body a {
   color: #fff;
   font-size: 52px;
   line-height: 58px;
+  padding-left: 10px;
   font-family: "essonnes-display", sans-serif;
   font-weight: 300;
 }
 
+@media screen and (min-width: 768px) {
+  .b-skill .b-skill_headline {
+    padding-left: 20px;
+  }
+}
+
 .b-skill .b-skill_item {
-  padding-bottom: 20px;
-  padding-top: 10px;
+  padding: 10px 10px 20px;
   margin-bottom: 15px;
 }
 
-.b-skill .b-skill_item:hover .b-skill_name {
-  color: #ffec9f;
+@media screen and (min-width: 768px) {
+  .b-skill .b-skill_item {
+    padding: 10px 20px 20px;
+  }
 }
 
-.b-skill .b-skill_item:hover .b-skill_content {
-  color: #fff;
+@media screen and (min-width: 768px) {
+  .b-skill .b-skill_item:hover {
+    background: #433706;
+    cursor: help;
+  }
+  .b-skill .b-skill_item:hover .b-skill_name {
+    color: #fff;
+    border-top: 1px solid #433706;
+  }
+  .b-skill .b-skill_item:hover .b-skill_content {
+    color: #fff;
+  }
 }
 
 .b-skill .b-skill_item .b-skill_name {
-  float: left;
-  width: 20%;
   font-family: "essonnes-display", sans-serif;
   font-weight: 300;
   color: #aaaaaa;
@@ -1665,12 +1714,25 @@ body a {
   line-height: 28px;
 }
 
+@media screen and (min-width: 768px) {
+  .b-skill .b-skill_item .b-skill_name {
+    float: left;
+    width: 20%;
+  }
+}
+
 .b-skill .b-skill_item .b-skill_content {
-  float: right;
-  width: 76%;
   font-family: "futura-pt", sans-serif;
   font-weight: 400;
+  padding-top: 22px;
   font-size: 16px;
   color: #dddddd;
   line-height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .b-skill .b-skill_item .b-skill_content {
+    float: right;
+    width: 76%;
+  }
 }
