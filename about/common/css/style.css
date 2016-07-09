@@ -1645,7 +1645,7 @@ body a {
 }
 
 .b-skill .b-skill_item:hover .b-skill_name {
-  color: #fff;
+  color: #ffec9f;
 }
 
 .b-skill .b-skill_item:hover .b-skill_content {
@@ -1658,17 +1658,16 @@ body a {
   font-family: "essonnes-display", sans-serif;
   font-weight: 300;
   color: #aaaaaa;
-  font-size: 32px;
+  font-size: 22px;
   margin-top: 5px;
   padding-top: 10px;
   border-top: 1px solid #222222;
-  line-height: 38px;
+  line-height: 28px;
 }
 
 .b-skill .b-skill_item .b-skill_content {
   float: right;
   width: 76%;
-  text-transform: uppercase;
   font-family: "futura-pt", sans-serif;
   font-weight: 400;
   font-size: 16px;

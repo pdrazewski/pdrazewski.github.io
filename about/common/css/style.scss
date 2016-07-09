@@ -81,28 +81,27 @@ body {
 		margin-bottom: 15px;
 		&:hover {
 			.b-skill_name {
-				color: $cl-white;
+				color: $cl-orangeFF;
 			}
 			.b-skill_content {
 				color: $cl-white;
 			}
 		}
 		.b-skill_name {
-			float: left;
+			float: left; 
 			width: 20%;
 			font-family: $font-secondary;
 			font-weight: 300;
 			color: $cl-greyA;
-			font-size: 32px;
+			font-size: 22px;
 			margin-top: 5px;
 			padding-top: 10px;
 			border-top: 1px solid $cl-grey2;
-			line-height: 38px;
+			line-height: 28px;
 		}
 		.b-skill_content {
 			float: right;
 			width: 76%;
-			text-transform: uppercase;
 			font-family: $font-primary;
 			font-weight: 400; 
 			font-size: 16px;
