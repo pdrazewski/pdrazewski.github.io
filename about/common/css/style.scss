@@ -3,6 +3,8 @@
 @import "_vars/_colors";
 @import "_vars/_typography";
 @import "modules/_typo"; 
+@import "modules/_btn";
+@import "modules/_hmbg";  
 
 body { 
 	font: 400 16px/22px $font-secondary;
@@ -23,7 +25,7 @@ body {
 	margin-top: 20px;
 	padding: 20px 0 30px;
 	background: $cl-grey1;
-	border-bottom: 1px solid$cl-grey3;
+	border-bottom: 1px solid $cl-grey2;
 }
 .b-logo {
 	font-family: $font-primary;
@@ -35,90 +37,81 @@ body {
 	float: left;
 	margin: 40px 0 0 80px;
 	position: relative;
-	padding-left: 60px;
+	padding-left: 35px;
 	span {
 		font-weight: 400;
-	}
+	} 
 }
 .b-lead {
 	padding: 40px 80px;
 	font-family: $font-secondary;
-	font-weight: 300;
 	color: $cl-greyA;
 	font-size: 42px;
 	line-height: 48px;
 	max-width: 75%;
+	font-weight: 300;
+	p {
+		font-size: inherit;
+		line-height: inherit;
+		font-weight: inherit;
+	}
 	b {
 		color: $cl-white;
+		font-weight: 400;
 	}
 }
-
-
-.m-hmbg {
-	cursor: pointer;
-	display: block;
-	height: 24px;
-	overflow: hidden;
-	font-size: 24px;
-	position: absolute;
-	left: 0;
-	z-index: 10;
-	top: 4px;
-	.m-hmbg_toggle {
-		position: relative;
-		@include rotate(0deg);
-		@include transition(.5s ease-in-out);
-		cursor: pointer; 
-		width: 32px;
-		margin: 0 auto;
-		span {
-			display: block;
-			position: absolute;
-			height: 2px;
-			width: 100%;
-			background: $cl-white;
-			opacity: 1;
-			left: 0;
-			@include rotate(0deg);
-			@include transition(.25s ease-in-out); 
-			&:nth-child(1) {
-				top: 0;
-				-webkit-transform-origin: left center;
-				-moz-transform-origin: left center;
-				-o-transform-origin: left center;
-				transform-origin: left center;
+.b-main {
+	padding: 20px 80px 30px;
+	background: $cl-grey1;
+	border-bottom: 1px solid $cl-grey2;
+}
+.b-skill {
+	.b-skill_headline {
+		padding-top: 20px;
+		padding-bottom: 40px;
+		color: $cl-white;
+		font-size: 52px;
+		line-height: 58px;
+		font-family: $font-secondary;
+		font-weight: 300;
+	}
+	.b-skill_item {
+		padding-bottom: 20px;
+		padding-top: 10px;
+		margin-bottom: 15px;
+		&:hover {
+			.b-skill_name {
+				color: $cl-white;
 			}
-			&:nth-child(2) {
-				top: 6px;
-				-webkit-transform-origin: left center;
-				-moz-transform-origin: left center;
-				-o-transform-origin: left center;
-				transform-origin: left center;
+			.b-skill_content {
+				color: $cl-white;
 			}
-			&:nth-child(3) {
-				top: 12px;
-				-webkit-transform-origin: left center;
-				-moz-transform-origin: left center;
-				-o-transform-origin: left center;
-				transform-origin: left center;
-			}
+		}
+		.b-skill_name {
+			float: left;
+			width: 20%;
+			font-family: $font-secondary;
+			font-weight: 300;
+			color: $cl-greyA;
+			font-size: 32px;
+			margin-top: 5px;
+			padding-top: 10px;
+			border-top: 1px solid $cl-grey2;
+			line-height: 38px;
+		}
+		.b-skill_content {
+			float: right;
+			width: 76%;
+			text-transform: uppercase;
+			font-family: $font-primary;
+			font-weight: 400; 
+			font-size: 16px;
+			color: $cl-greyD;
+			line-height: 24px;
 		}
 	}
 }
 
-.m-btn {
-	margin-left: 80px;
-	padding: 10px 20px;
-	color: $cl-white;
-	font-size: 16px;
-	float: left;
-	text-decoration: none;
-	display: block;
-	margin-bottom: 20px;
-	background: transparent;
-	border: 2px solid $cl-white;
-	text-transform: uppercase;
-	font-family: $font-primary;
-	font-weight: 500;
 
-}
+
+

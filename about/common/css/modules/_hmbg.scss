@@ -5,27 +5,26 @@
 	overflow: hidden;
 	font-size: 24px;
 	position: absolute;
-	left: 10px;
+	left: 0;
 	z-index: 10;
-	top: 22px;
+	top: 4px;
 	.m-hmbg_toggle {
 		position: relative;
 		@include rotate(0deg);
 		@include transition(.5s ease-in-out);
 		cursor: pointer; 
-		width: 24px;
+		width: 21px;
 		margin: 0 auto;
 		span {
 			display: block;
 			position: absolute;
-			height: 3px;
+			height: 2px;
 			width: 100%;
-			background: $cl-black;
+			background: $cl-white;
 			opacity: 1;
 			left: 0;
 			@include rotate(0deg);
 			@include transition(.25s ease-in-out); 
-			@include border-radius(5px);
 			&:nth-child(1) {
 				top: 0;
 				-webkit-transform-origin: left center;
@@ -34,14 +33,14 @@
 				transform-origin: left center;
 			}
 			&:nth-child(2) {
-				top: 8px;
+				top: 6px;
 				-webkit-transform-origin: left center;
 				-moz-transform-origin: left center;
 				-o-transform-origin: left center;
 				transform-origin: left center;
 			}
 			&:nth-child(3) {
-				top: 16px;
+				top: 12px;
 				-webkit-transform-origin: left center;
 				-moz-transform-origin: left center;
 				-o-transform-origin: left center;

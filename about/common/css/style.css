@@ -1481,61 +1481,26 @@ img {
   cursor: default;
 }
 
-body {
-  font: 400 16px/22px "essonnes-display", sans-serif;
-  background: #222222;
-}
-
-body p {
-  font: 400 16px/22px "essonnes-display", sans-serif;
-}
-
-body a {
-  font: 600 16px/22px "essonnes-display", sans-serif;
-}
-
-.b-mainWrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-  min-height: 500px;
-}
-
-.b-header {
-  margin-top: 20px;
-  padding: 20px 0 30px;
-  background: #111111;
-  border-bottom: 1px solid #333333;
-}
-
-.b-logo {
-  font-family: "futura-pt", sans-serif;
+.m-btn {
+  margin-left: 80px;
+  padding: 15px 30px;
   color: #fff;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 5px;
+  font-size: 16px;
   float: left;
-  margin: 40px 0 0 80px;
-  position: relative;
-  padding-left: 60px;
-}
-
-.b-logo span {
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background: transparent;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  font-family: "futura-pt", sans-serif;
   font-weight: 400;
 }
 
-.b-lead {
-  padding: 40px 80px;
-  font-family: "essonnes-display", sans-serif;
-  font-weight: 300;
-  color: #aaaaaa;
-  font-size: 42px;
-  line-height: 48px;
-  max-width: 75%;
-}
-
-.b-lead b {
-  color: #fff;
+.m-btn:hover {
+  text-decoration: none;
+  background: #000;
 }
 
 .m-hmbg {
@@ -1557,7 +1522,7 @@ body a {
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  width: 32px;
+  width: 21px;
   margin: 0 auto;
 }
 
@@ -1593,18 +1558,120 @@ body a {
   transform-origin: left center;
 }
 
-.m-btn {
-  margin-left: 80px;
-  padding: 10px 20px;
+body {
+  font: 400 16px/22px "essonnes-display", sans-serif;
+  background: #222222;
+}
+
+body p {
+  font: 400 16px/22px "essonnes-display", sans-serif;
+}
+
+body a {
+  font: 600 16px/22px "essonnes-display", sans-serif;
+}
+
+.b-mainWrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+
+.b-header {
+  margin-top: 20px;
+  padding: 20px 0 30px;
+  background: #111111;
+  border-bottom: 1px solid #222222;
+}
+
+.b-logo {
+  font-family: "futura-pt", sans-serif;
   color: #fff;
-  font-size: 16px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 5px;
   float: left;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 20px;
-  background: transparent;
-  border: 2px solid #fff;
+  margin: 40px 0 0 80px;
+  position: relative;
+  padding-left: 35px;
+}
+
+.b-logo span {
+  font-weight: 400;
+}
+
+.b-lead {
+  padding: 40px 80px;
+  font-family: "essonnes-display", sans-serif;
+  color: #aaaaaa;
+  font-size: 42px;
+  line-height: 48px;
+  max-width: 75%;
+  font-weight: 300;
+}
+
+.b-lead p {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+.b-lead b {
+  color: #fff;
+  font-weight: 400;
+}
+
+.b-main {
+  padding: 20px 80px 30px;
+  background: #111111;
+  border-bottom: 1px solid #222222;
+}
+
+.b-skill .b-skill_headline {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  color: #fff;
+  font-size: 52px;
+  line-height: 58px;
+  font-family: "essonnes-display", sans-serif;
+  font-weight: 300;
+}
+
+.b-skill .b-skill_item {
+  padding-bottom: 20px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+}
+
+.b-skill .b-skill_item:hover .b-skill_name {
+  color: #fff;
+}
+
+.b-skill .b-skill_item:hover .b-skill_content {
+  color: #fff;
+}
+
+.b-skill .b-skill_item .b-skill_name {
+  float: left;
+  width: 20%;
+  font-family: "essonnes-display", sans-serif;
+  font-weight: 300;
+  color: #aaaaaa;
+  font-size: 32px;
+  margin-top: 5px;
+  padding-top: 10px;
+  border-top: 1px solid #222222;
+  line-height: 38px;
+}
+
+.b-skill .b-skill_item .b-skill_content {
+  float: right;
+  width: 76%;
   text-transform: uppercase;
   font-family: "futura-pt", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 16px;
+  color: #dddddd;
+  line-height: 24px;
 }
