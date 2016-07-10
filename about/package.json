@@ -6,6 +6,7 @@
     "gulp": "~3.9.1",
     "gulp-sass": "~2.3.1",
     "gulp-autoprefixer": "~3.1.0",
-    "sassdoc": "~2.1.20"
+    "sassdoc": "~2.1.20",
+    "gulp-inline-css": "~3.1.0"
   }
 }

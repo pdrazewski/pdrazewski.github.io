@@ -6,6 +6,9 @@
 @import "modules/_btn";
 @import "modules/_hmbg";  
 
+html {
+	background: $cl-grey2;
+}
 body { 
 	font: 400 16px/22px $font-secondary;
 	background: $cl-grey2;
@@ -15,7 +18,7 @@ body {
 	a {
 		font: 600 16px/22px $font-secondary;
 	}
-}       
+}      
 .b-mainWrapper {
 	max-width: 1280px;
 	margin: 0 auto;
@@ -107,7 +110,7 @@ body {
 					color: $cl-white;
 				}
 			}
-		}
+		} 
 		.b-skill_name {
 			font-family: $font-secondary;
 			font-weight: 300;
@@ -131,6 +134,7 @@ body {
 			line-height: 24px;
 			@include bp(tablet) {
 				float: right;
+				font-size: 18px;
 				width: 76%;
 			}
 		}

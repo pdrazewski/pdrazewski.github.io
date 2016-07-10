@@ -4,10 +4,11 @@ var autoprefixer = require('gulp-autoprefixer');
 var sassdoc = require('sassdoc');
 
 var input = ['./common/css/**/*.scss','./common/css/*.scss'];
+var input2 = ['mail/build/*.html']
 var output = './common/css';
 var sassOptions = {
   errLogToConsole: true,
-  outputStyle: 'expanded'
+  outputStyle: 'compressed'
 };
 var autoprefixerOptions = {
   browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
@@ -15,6 +16,19 @@ var autoprefixerOptions = {
 var sassdocOptions = {
   dest: './sassdoc'
 };
+var gulp = require('gulp'),
+inlineCss = require('gulp-inline-css');
+ 
+gulp.task('mail', function() {
+    return gulp.src('mail/build/*.html')
+        .pipe(inlineCss({
+	        	applyStyleTags: true,
+	        	applyLinkTags: true,
+	        	removeStyleTags: true,
+	        	removeLinkTags: true
+        }))
+        .pipe(gulp.dest('mail/'));
+});
 
 gulp.task('sass', function () {
   return gulp
@@ -29,7 +43,15 @@ gulp.task('watch', function() {
   return gulp
     .watch(input, ['sass'])
     .on('change', function(event) {
-      console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+      console.log('File ' + input + event.path + ' was ' + event.type + ', running tasks...');
+    });
+});
+
+gulp.task('watchmail', function() {
+  return gulp
+    .watch(input2, ['mail'])
+    .on('change', function(event) {
+      console.log('File ' + input + event.path + ' was ' + event.type + ', running tasks...');
     });
 });
 
