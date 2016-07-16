@@ -1483,14 +1483,24 @@ img {
 
 body {
   font: 400 16px/22px "Yantramanav";
+  background: #222222;
+  color: #eeeeee;
 }
 
 body p {
-  font: 400 16px/22px "Yantramanav";
+  font: inherit;
 }
 
 body a {
-  font: 600 16px/22px "Yantramanav";
+  font: inherit;
+}
+
+.b-mainContent {
+  width: 100%;
+  max-width: 1140px;
+  background: #111111;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1520,13 +1530,6 @@ body a {
     top: 0;
     bottom: 0;
     position: fixed;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .b-mainContent {
-    width: 75%;
-    float: right;
   }
 }
 

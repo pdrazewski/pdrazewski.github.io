@@ -6,13 +6,22 @@
 
 body { 
 	font: 400 16px/22px $font-secondary;
+	background: $cl-grey2;
+	color: $cl-greyE;
 	p {
-		font: 400 16px/22px $font-secondary;
+		font: inherit;
 	}
 	a {
-		font: 600 16px/22px $font-secondary;
+		font: inherit;
 	}
-}      
+}    
+.b-mainContent {
+	width: 100%;
+	max-width: 1140px;
+	background: $cl-grey1;
+	margin: 0 auto;
+	padding: 30px;
+}
 .b-sidebar {
 	@include bp(tablet) {
 		align-items: center;
@@ -30,12 +39,6 @@ body {
 		top: 0;
 		bottom: 0;
 		position: fixed; 
-	}
-}
-.b-mainContent {
-	@include bp(tablet) {
-		width: 75%;
-		float: right;
 	}
 }
 .b-personalData {
