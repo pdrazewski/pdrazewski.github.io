@@ -1,0 +1,5 @@
+/node_modules
+/Develnodejsnpm-cache
+/vendor
+npm-debug.log
+/bower_components

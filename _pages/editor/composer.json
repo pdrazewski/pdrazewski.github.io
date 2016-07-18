@@ -1,0 +1,58 @@
+{
+	"repositories": {
+		"ace-editor": {
+			"type": "package",
+			"package": {
+				"name": "ajaxorg/ace-builds",
+				"version": "1.2.3",
+				"source": {
+					"url": "https://github.com/ajaxorg/ace-builds",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		},
+		"css-json": {
+			"type": "package",
+			"package": {
+				"name": "aramk/CSSJSON",
+				"version": "2.1.0",
+				"source": {
+					"url": "https://github.com/aramk/CSSJSON",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		},
+		"jq-dump": {
+			"type": "package",
+			"package": {
+				"name": "tdolsen/jquery-dump",
+				"version": "1.0.0",
+				"source": {
+					"url": "https://github.com/tdolsen/jquery-dump",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		},
+		"copy-css": {
+			"type": "package",
+			"package": {
+				"name": "moagrius/copycss",
+				"version": "1.0.0",
+				"source": {
+					"url": "https://github.com/moagrius/copycss",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		}
+	},
+	"require": {
+		"ajaxorg/ace-builds": "*",
+		"aramk/CSSJSON": "*",
+		"tdolsen/jquery-dump": "*",
+		"moagrius/copycss": "*"
+	}
+}
