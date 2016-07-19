@@ -1,20 +1,16 @@
 var React = require('react/addons');
-var faker = require('faker');
 
 console.log('hello from jsx')
 
 var GroceryItemList = require('./components/GroceryItemList.jsx');
+var GroceryItemStore = require('./stores/GroceryItemStore.jsx');
 
-var initial = [{
-	name: faker.name.findName()
-}, {
-	name: faker.name.findName()
-}, {
-	name: faker.name.findName(),
-	purchased: true
-},{
-	name: faker.name.findName()
-} ]
-
-
-React.render(<GroceryItemList items={initial}/>, app)
+var initial = GroceryItemStore.getItems();
+function render() {
+	React.render(<GroceryItemList items={initial}/>, app)
+}
+GroceryItemStore.onChange(function(items) {
+	initial = items;
+	render();
+});
+render();
