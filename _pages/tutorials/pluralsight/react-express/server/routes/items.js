@@ -1,22 +1,18 @@
-var faker = require('faker');
 module.exports = function (app) {
-	var items = [{
-		name: faker.name.findName()
-	}, {
-		name: faker.name.findName()
-	}, {
-		name: faker.name.findName(),
-		purchased: true
-	},{
-		name: faker.name.findName()
-	}];
+	
+	var GroceryItem = require('./../models/GroceryItem.js');
 
 	app.route('/api/items')
 	.get(function(req, res){
-		res.send(items)
+		GroceryItem.find(function(error, doc){
+			res.send(doc)
+		})
 	})
 	.post(function(req, res){
 		var item = req.body;
-		items.push(item);
+		var groceryItem = new GroceryItem(item);
+		groceryItem.save(function(error, doc){
+			res.status(300).send();
+		})
 	})
 }
