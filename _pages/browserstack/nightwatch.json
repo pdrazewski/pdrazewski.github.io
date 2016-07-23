@@ -1,0 +1,85 @@
+{
+  "src_folders" : ["tests/"],
+
+  "selenium" : {
+    "start_process" : false,
+    "host" : "hub.browserstack.com",
+    "port" : 80
+  },
+
+  "test_settings" : {
+    "firefox" : {
+      "launch_url" : "http://hub.browserstack.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.browserstack.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "browserstack.user": "gfxenet",
+        "browserstack.key": "LfAvrNxEtcyu8ckeUtTl"
+      }
+    },
+    "chrome" : {
+      "launch_url" : "http://hub.browserstack.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.browserstack.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName": "Chrome",
+        "os": "Windows",
+        "browser_version": "46.0",
+        "os_version": "0",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "browserstack.user": "gfxenet",
+        "browserstack.key": "LfAvrNxEtcyu8ckeUtTl"
+      }
+    },
+    "safari" : {
+      "launch_url" : "http://hub.browserstack.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.browserstack.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserstack.ie.enablePopups": true,
+        "browserName": "safari",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "browserstack.user": "gfxenet",
+        "browserstack.key": "LfAvrNxEtcyu8ckeUtTl"
+      }
+    },
+    "ie" : {
+      "launch_url" : "http://hub.browserstack.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.browserstack.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserstack.ie.enablePopups": true,
+        "browserName": "internet explorer",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "browserstack.user": "gfxenet",
+        "browserstack.key": "LfAvrNxEtcyu8ckeUtTl"
+      }
+    }
+  }
+}
