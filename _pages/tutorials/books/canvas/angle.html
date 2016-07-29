@@ -1,0 +1,24 @@
+<!-- layout.nunjucks -->
+
+<!DOCTYPE html>
+<html lang="en" class="root">
+<head>
+  	<meta charset="UTF-8"> 
+  	<title>Canvas</title>
+</head>
+<body>
+	<canvas width="500" height="500" id="myCanvas"></canvas>
+	<script type="text/javascript">
+		window.onload = function() {
+			var canvas = document.getElementById("myCanvas");
+			var context = canvas.getContext("2d");
+			context.lineWidth = 10;
+			context.strokeStyle = "blue";
+			context.lineCap = "round";
+			context.moveTo(50, canvas.height - 50);
+			context.lineTo(canvas.width - 50, 50);
+			context.stroke();
+		}
+	</script>
+</body>
+</html>
