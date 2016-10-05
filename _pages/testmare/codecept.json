@@ -1,6 +1,6 @@
 {
-  "tests": "tests/*_test.js",
-  "timeout": 10000,
+  "tests": "tests/**/*_test.js",
+  "timeout": 2000,
   "output": "./output",
   "helpers": {
     "Nightmare": {
