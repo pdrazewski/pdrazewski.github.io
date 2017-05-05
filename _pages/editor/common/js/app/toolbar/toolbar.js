@@ -1,1 +1,0 @@
-namespace('enp.editor.toolbar');
