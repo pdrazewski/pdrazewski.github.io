@@ -1,0 +1,32 @@
+(function () {
+  
+  const elements = [].slice.call(document.querySelectorAll('[data-style-edit]'));
+
+  /**
+   * Get style declarations for current DOM Node
+   * 
+   * @param  {DOMNode} element Dom Node from which we retrive 
+   * @return {Array}  Array of CSS declarations
+   */
+  const getStyleDeclarations = (element) => {
+  	return element.dataset.styleEdit
+  }
+
+  const getDocumentStylesheets = () => {
+  	console.log(document.styleSheets[0].cssRules)
+  	return document.styleSheets
+  }
+
+  const searchElementDeclarations = (element) => {
+  	let styles = [];
+  	let obj = document.defaultView.getComputedStyle(element, null)
+  	return obj 
+  }
+
+  for(let i = 0; i < elements.length; ++i) {
+  	getStyleDeclarations(elements[i])
+  	console.log(searchElementDeclarations(elements[i]))
+  }
+
+
+})();
